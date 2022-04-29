@@ -2,7 +2,7 @@ import "../styles/globals.css";
 
 function MyApp() {
   return (
-    <div className="text-3xl">
+    <div className="container mx-auto">
       <h1>Star Wars wiki</h1>
     </div>
   );
