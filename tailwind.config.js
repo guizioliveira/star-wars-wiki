@@ -10,7 +10,23 @@ module.exports = {
       lg: "1024px",
       xl: "1440px"
     },
-    extend: {}
+    extend: {
+      colors: {
+        primary: {
+          500: "#00AFBF",
+          700: "#009BA6",
+          900: "#003f5a"
+        },
+        dark: {
+          700: "#161614",
+          800: "#0B090A",
+          900: "#000000"
+        }
+      },
+      fontSize: {
+        xxs: ".625rem"
+      }
+    }
   },
   plugins: []
 };
