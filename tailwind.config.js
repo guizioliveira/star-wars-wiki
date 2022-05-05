@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 module.exports = {
   mode: "jit",
   content: ["./src/pages/**/*.jsx", "./src/components/**/*.jsx"],
@@ -13,8 +14,11 @@ module.exports = {
     extend: {
       colors: {
         primary: {
+          400: "#00D2E5",
           500: "#00AFBF",
-          700: "#009BA6",
+          600: "#009BA6",
+          700: "#006972",
+          800: "#00444C",
           900: "#003f5a"
         },
         dark: {
@@ -28,5 +32,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [require("tailwindcss-animation-delay")]
 };
