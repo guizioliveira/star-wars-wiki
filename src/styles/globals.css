@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,8 +8,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* @apply min-h-screen bg-gradient-to-b from-[#070707] to-primary-900; */
+  @apply min-h-screen bg-gradient-to-b from-dark-800 to-primary-900;
 }
 
 a {
@@ -17,4 +20,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.card {
+  background: linear-gradient(90deg, #02020a 40%, rgba(10, 9, 11, 0) 84.82%);
 }
