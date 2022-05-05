@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import image from "../../assests/image.png";
 
-/* eslint-disable import/prefer-default-export */
 export function CharactersCard({ index, details }) {
   const char = details;
   return (

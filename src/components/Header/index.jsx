@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export function Header() {
   return (
     <div className="py-10 mb-4 flex items-center justify-center border-b-2 border-primary-900 border-opacity-50">

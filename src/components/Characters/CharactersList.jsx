@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { useEffect } from "react";
 import { Loading } from "../Loading";
 import { getDataFromMultiplePagesAPI } from "../../pages/api/characterAPI";

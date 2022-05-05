@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { Circle } from "phosphor-react";
 
 export function Loading() {
