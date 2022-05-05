@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Loading } from "../Loading";
 import { getDataFromMultiplePagesAPI } from "../../pages/api/characterAPI";
+import { CharactersCard } from "./CharactersCard";
 
 export function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -20,11 +21,7 @@ export function CharacterList() {
           {characters
             ?.sort((a, b) => a.name.localeCompare(b.name))
             .map((char, index) => (
-              <div key={index}>
-                <h2>{char.name}</h2>
-                <span>{`${char.birth_year} · ${char.height}cm · ${char.mass}kg`}</span>
-                <span>{char.homeworld}</span>
-              </div>
+              <CharactersCard key={index} details={char} />
             ))}
         </div>
       )}
