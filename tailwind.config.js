@@ -1,14 +1,14 @@
 module.exports = {
   mode: "jit",
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
-  ],
+  content: ["./src/pages/**/*.jsx", "./src/components/**/*.jsx"],
   theme: {
     screens: {
-      sm: "576px",
-      md: "960px",
-      lg: "1440px"
+      xxs: "360px",
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px"
     },
     extend: {}
   },
