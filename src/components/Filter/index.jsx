@@ -34,7 +34,7 @@ export function Filter() {
   }
   return (
     <div className="w-full flex mt-3 sm:mt-0 justify-end">
-      <div className="relative w-3/4 sm:w-[225px] flex items-center text-gray-400 focus-within:text-white group">
+      <div className="relative w-3/4 sm:w-[225px] flex items-center text-gray-400 focus-within:text-white ">
         <MagnifyingGlass
           weight="bold"
           className="absolute w-[18px] h-[18px] left-3 pointer-events-none"
@@ -42,12 +42,12 @@ export function Filter() {
         <input
           type="text"
           placeholder="Search"
-          className="bg-primary-900 py-2 px-2 pl-9 text-sm rounded-2xl w-full"
+          className="bg-primary-900 py-2 px-2 pl-9 text-sm rounded-2xl w-full focus-within:outline-none focus-within:ring-2 focus-within:ring-primary-900 focus-within:ring-opacity-75 focus-within:ring-offset-2 focus-within:ring-offset-dark-900"
         />
       </div>
       <button
         onClick={openModal}
-        className="bg-primary-900 w-1/4 h-9 sm:w-9 ml-3 rounded-full flex justify-center items-center text-gray-400 hover:text-white hover:bg-primary-500 transition"
+        className="bg-primary-900 w-1/4 h-9 sm:w-9 ml-3 rounded-full flex justify-center items-center text-gray-400 hover:text-white hover:bg-primary-500 transition focus:outline-none focus-visible:ring-2 focus-visible:hover:ring-primary-500 focus-visible:ring-primary-900 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900"
       >
         <Funnel weight="bold" className="w-[18px] h-[18px]" />
       </button>
@@ -105,7 +105,7 @@ export function Filter() {
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md bg-primary-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="inline-flex justify-center rounded-md bg-primary-500 px-4 py-2 text-sm font-medium hover:bg-primary-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 sm:text-sm text-white"
                       onClick={handleFilters}
                     >
                       Apply Filters
