@@ -52,8 +52,13 @@ export function Filter() {
         <Funnel weight="bold" className="w-[18px] h-[18px]" />
       </button>
 
-      <Popup isOpen={isOpen} title={"Filters"} setIsOpen={setIsOpen}>
-        <div className="mt-2 flex flex-col gap-2">
+      <Popup
+        isOpen={isOpen}
+        title={"Filters"}
+        setIsOpen={setIsOpen}
+        padding="true"
+      >
+        <div className="mt-2 w-auto md:w-96 flex flex-col gap-2">
           <ListBoxFilter
             optionsList={filters}
             getter={filterBy}

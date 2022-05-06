@@ -22,7 +22,7 @@ export function Popup(props) {
           <div className="fixed inset-0 bg-black bg-opacity-25" />
         </Transition.Child>
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="flex min-h-full items-center justify-center text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -32,10 +32,14 @@ export function Popup(props) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform rounded-2xl bg-gradient-to-b from-primary-900 to-dark-800 p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel
+                className={`${
+                  props.padding && "p-6"
+                } w-5/6 md:w-auto md:max-w-3xl transform rounded-2xl bg-gradient-to-b from-primary-900 to-dark-800 text-left align-middle shadow-xl transition-all"`}
+              >
                 <button
                   onClick={closeModal}
-                  className="absolute top-6 right-6 text-white hover:text-primary-500"
+                  className="absolute z-20 top-6 right-6 text-white hover:text-primary-500"
                 >
                   <X weight="bold" className="w-6 h-6" />
                 </button>
