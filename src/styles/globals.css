@@ -25,3 +25,8 @@ a {
 .card {
   background: linear-gradient(90deg, #02020a 40%, rgba(10, 9, 11, 0) 84.82%);
 }
+
+.details-image {
+  -webkit-mask-image: linear-gradient(black 50%, transparent);
+  mask-image: linear-gradient(black 50%, transparent);
+}

@@ -14,8 +14,9 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          400: "#00D2E5",
-          500: "#00AFBF",
+          300: "#00D2E5",
+          400: "#00AFBF",
+          500: "#5AA7D6",
           600: "#009BA6",
           700: "#006972",
           800: "#00444C",
@@ -35,5 +36,8 @@ module.exports = {
       }
     }
   },
-  plugins: [require("tailwindcss-animation-delay")]
+  plugins: [
+    require("tailwindcss-animation-delay"),
+    require("@tailwindcss/line-clamp")
+  ]
 };
