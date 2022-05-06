@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import image from "../../assests/image3.jpg";
+import image from "../../assests/image2.jpg";
 import { Popup } from "../Commons/Popup";
 import { CharactersDetails } from "./CharactersDetails";
 
@@ -18,12 +18,12 @@ export function CharactersCard({ index, details }) {
       <button
         key={index}
         onClick={openModal}
-        className="relative overflow-hidden h-44 rounded-3xl bg-dark-800 flex group transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-700"
+        className="relative overflow-hidden h-44 rounded-3xl bg-primary-900 flex group transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-700"
       >
         <div className="flex flex-col items-start justify-end text-left gap-1 z-10 p-5 w-full h-full rounded-lg text-white card duration-300">
           <h2 className="font-bold text-sm sm:text-xl">{char.name}</h2>
           <span className="font-normal text-[.5rem] sm:text-xxs tracking-widest">{`${char.birth_year} · ${char.height}cm · ${char.mass}kg`}</span>
-          <div className="bg-primary-900 tracking-widest rounded-md px-2 py-1 text-[.5rem] sm:text-xxs flex w-20 sm:w-24 justify-start">
+          <div className="bg-primary-900 tracking-widest rounded-md px-2 py-1 text-[.5rem] sm:text-xxs flex w-20 justify-start">
             {char.planet.name}
           </div>
         </div>

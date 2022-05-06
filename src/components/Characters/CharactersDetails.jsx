@@ -1,12 +1,12 @@
 import Image from "next/image";
-import image from "../../assests/image3.jpg";
+import image from "../../assests/image2.jpg";
 
 export function CharactersDetails({ details }) {
   return (
     <>
       <div className="md:py-20 md:px-14">
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="relative w-full h-64 rounded-t-lg details-image md:w-64 md:h-64 md:rounded-full">
+          <div className="relative w-full h-64 bg-dark-700 rounded-t-lg details-image md:w-64 md:h-64 md:rounded-full">
             <div className="absolute w-full h-full -top-1/2 md:top-0">
               <Image
                 src={image}
