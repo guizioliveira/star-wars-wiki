@@ -17,7 +17,7 @@ export function CharacterList({ charData, setCharacters }) {
           <Loading />
         </div>
       ) : (
-        <div className="py-4 w-full grid grid-cols-1 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 xl:gap-9">
+        <div className="py-4 w-full grid grid-cols-2 xl:grid-cols-4 md:grid-cols-3 gap-4 xl:gap-9">
           {charData
             ?.sort((a, b) => a.name.localeCompare(b.name))
             .map((char, index) => (
