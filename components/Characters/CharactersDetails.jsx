@@ -91,7 +91,7 @@ export function CharactersDetails({ url, characters, planets }) {
           }`}
         >
           <div
-            className={`flex items-center gap-2 ${isPerson && "md:flex-col"}`}
+            className={`flex gap-2 ${isPerson && "items-center md:flex-col"}`}
           >
             <span className="text-white font-extrabold tracking-widest uppercase text-sm md:text-base">
               {isPerson ? "Birth Year" : "Climate"}
@@ -101,7 +101,7 @@ export function CharactersDetails({ url, characters, planets }) {
             </span>
           </div>
           <div
-            className={`flex items-center gap-2 ${isPerson && "md:flex-col"}`}
+            className={`flex gap-2 ${isPerson && "items-center md:flex-col"}`}
           >
             <span className="text-white font-extrabold tracking-widest uppercase text-sm md:text-base">
               {isPerson ? "Height" : "Diameter"}
@@ -111,7 +111,7 @@ export function CharactersDetails({ url, characters, planets }) {
             </span>
           </div>
           <div
-            className={`flex items-center gap-2 ${isPerson && "md:flex-col"}`}
+            className={`flex gap-2 ${isPerson && "items-center md:flex-col"}`}
           >
             <span className="text-white font-extrabold tracking-widest uppercase text-sm md:text-base">
               {isPerson ? "Mass" : "Population"}
@@ -125,7 +125,11 @@ export function CharactersDetails({ url, characters, planets }) {
               isPerson ? "md:flex-col" : "flex-col"
             }`}
           >
-            <span className="text-white w-full font-extrabold tracking-widest uppercase text-sm md:text-base">
+            <span
+              className={`text-white font-extrabold tracking-widest uppercase text-sm md:text-base ${
+                !isPerson && "w-full"
+              }`}
+            >
               {isPerson ? "Homeworld" : "Residents"}
             </span>
             <div className="flex flex-wrap w-full gap-2">
