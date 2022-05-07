@@ -1,6 +1,6 @@
 import axios from "axios";
 import cheerio from "cheerio";
-import image from "../../assests/undefined.png";
+import image from "../../assets/undefined.png";
 
 const SWAPI_BASE_URL = "https://swapi.dev/api";
 const SWAPI_PEOPLE_URL = (page) => `${SWAPI_BASE_URL}/people?page=${page}`;
