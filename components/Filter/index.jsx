@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MagnifyingGlass, Funnel } from "phosphor-react";
 import { ListBoxFilter } from "./ListBoxFilter";
 import { Popup } from "../Commons/Popup";
@@ -15,10 +15,11 @@ const order = [
   { id: 2, name: "descending" }
 ];
 
-export function Filter() {
+export function Filter({ charData, setFilter }) {
   const [isOpen, setIsOpen] = useState(false);
   const [filterBy, setFilterBy] = useState(filters[0]);
   const [orderBy, setOrderBy] = useState(order[0]);
+  const [searchValue, setSearchValue] = useState("");
 
   function closeModal() {
     setIsOpen(false);
@@ -32,6 +33,20 @@ export function Filter() {
   function openModal() {
     setIsOpen(true);
   }
+
+  function handleSearch(event) {
+    setSearchValue(event.target.value);
+    const filterCharacters = {};
+    Object.values(charData)
+      .filter((character) =>
+        character.name.toLowerCase().includes(event.target.value.toLowerCase())
+      )
+      .forEach((character) => {
+        filterCharacters[character.url] = character;
+      });
+    setFilter(filterCharacters);
+  }
+
   return (
     <div className="w-full flex mt-3 sm:mt-0 justify-end">
       <div className="relative w-3/4 sm:w-[225px] flex items-center text-gray-400 focus-within:text-white ">
@@ -42,6 +57,8 @@ export function Filter() {
         <input
           type="text"
           placeholder="Search"
+          value={searchValue}
+          onChange={handleSearch}
           className="bg-primary-900 py-2 px-2 pl-9 text-sm rounded-2xl w-full focus-within:outline-none focus-within:ring-2 focus-within:ring-primary-900 focus-within:ring-opacity-75 focus-within:ring-offset-2 focus-within:ring-offset-dark-900"
         />
       </div>
