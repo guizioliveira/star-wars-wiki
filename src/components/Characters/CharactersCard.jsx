@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Popup } from "../Commons/Popup";
 import { CharactersDetails } from "./CharactersDetails";
+import { height, mass, concatInfo } from "../Commons/Formaters";
 
 export function CharactersCard({ url, characters, planets }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +19,11 @@ export function CharactersCard({ url, characters, planets }) {
         <div className="flex flex-col items-start justify-end text-left gap-2 z-10 p-5 w-full h-full rounded-lg text-white card duration-300">
           <h2 className="font-bold text-sm sm:text-xl">{char.name}</h2>
           <span className="font-normal text-[.5rem] sm:text-xxs tracking-widest">
-            {char.birth_year}
-            {char.height}
-            {char.mass}
+            {concatInfo([
+              char.birth_year,
+              height(char.height),
+              mass(char.mass)
+            ])}
           </span>
           <div className=" bg-primary-900 tracking-widest rounded-md px-2 py-1 text-[.5rem] sm:text-xxs flex items-center gap-2 min-w-[50px] justify-start">
             <div className="relative w-4 h-4 rounded-full bg-dark-900">

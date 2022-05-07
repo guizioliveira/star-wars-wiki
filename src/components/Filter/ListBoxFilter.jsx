@@ -1,10 +1,7 @@
 import { Fragment } from "react";
 import { Transition, Listbox } from "@headlessui/react";
 import { Check, CaretDown } from "phosphor-react";
-
-function capitalize(string) {
-  return string.replace(/^\w/, (c) => c.toUpperCase());
-}
+import { capitalize } from "../Commons/Formaters";
 
 export function ListBoxFilter({ optionsList, getter, setter }) {
   return (
