@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { height, mass, population, diameter } from "../Commons/Formaters";
+import {
+  height,
+  mass,
+  population,
+  diameter,
+  capitalize
+} from "../Commons/Formaters";
 
 export function CharactersDetails({ url, characters, planets }) {
   const [requestType, setRequestType] = useState(url);
@@ -97,7 +103,7 @@ export function CharactersDetails({ url, characters, planets }) {
               {isPerson ? "Birth Year" : "Climate"}
             </span>
             <span className="text-white tracking-widest text-sm md:text-base">
-              {isPerson ? details.birth_year : details.climate}
+              {isPerson ? details.birth_year : capitalize(details.climate)}
             </span>
           </div>
           <div
