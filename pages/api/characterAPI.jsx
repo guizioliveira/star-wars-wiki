@@ -22,9 +22,9 @@ const getCharacters = async () => {
   }
 
   const moreCharacters = await Promise.all(characterPromises);
-  return characters.concat(
-    ...moreCharacters.map((response) => response.results)
-  );
+  return characters
+    .concat(...moreCharacters.map((response) => response.results))
+    .sort((a, b) => a.name.localeCompare(b.name));
 };
 
 const getPlanets = async (characters) => {

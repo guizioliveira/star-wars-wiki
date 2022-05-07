@@ -1,6 +1,12 @@
 const validString = (string) => string !== undefined && string !== "unknown";
 const numberFormat = (string) => string.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+export function sortNumberFormat(string) {
+  return string !== "unknown"
+    ? Number(string.replace(",", "").replace("BBY", ""))
+    : 0;
+}
+
 export function capitalize(string) {
   return validString(string) && string.replace(/^\w/, (c) => c.toUpperCase());
 }
