@@ -35,7 +35,6 @@ export function CharactersCard({ url, characters, planets }) {
                   priority
                   layout="fill"
                   objectFit="cover"
-                  quality={50}
                 />
               </div>
             </div>
@@ -49,7 +48,7 @@ export function CharactersCard({ url, characters, planets }) {
             priority
             layout="fill"
             objectFit="cover"
-            quality={100}
+            objectPosition="top"
           />
         </div>
       </button>

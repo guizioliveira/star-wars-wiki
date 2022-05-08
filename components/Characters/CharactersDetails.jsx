@@ -34,17 +34,15 @@ export function CharactersDetails({ url, characters, planets }) {
   return (
     <>
       <div className="md:py-20 md:px-14">
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="relative w-full h-64 bg-dark-700 rounded-t-lg details-image md:w-64 md:h-64 md:rounded-full">
+        <div className="flex flex-col gap-2 md:flex-row md:gap-8">
+          <div className="relative w-full h-72 bg-dark-700 rounded-t-lg details-image md:w-64 md:h-64 md:rounded-full">
             <div className="absolute w-full h-full top-0 md:top-0">
               <Image
                 src={details.image}
                 alt={`Image of ${details.name}`}
-                layout="responsive"
-                width={256}
-                height={256}
+                layout="fill"
                 objectFit="cover"
-                quality={100}
+                objectPosition="top"
               />
             </div>
           </div>
@@ -70,7 +68,6 @@ export function CharactersDetails({ url, characters, planets }) {
                         priority
                         layout="fill"
                         objectFit="cover"
-                        quality={50}
                       />
                     </div>
                   </div>
