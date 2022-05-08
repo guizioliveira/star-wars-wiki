@@ -22,11 +22,18 @@ export default function Home({ characterMap, planetMap }) {
   return (
     <>
       <Head>
-        <title>Star Wars wiki</title>
+        <title>Star Wars wiki | This is the way</title>
         <meta
           name="description"
-          content="A wiki to learn more about characters and planets of the Star Wars world "
+          content="A wiki to learn more about characters and planets of the Star Wars world"
         />
+        <meta property="og:title" content="Star Wars wiki" />
+        <meta
+          property="og:description"
+          content="A wiki to learn more about characters and planets of the Star Wars world"
+        />
+        <meta property="og:url" content="https://star-wars-wiki.vercel.app/" />
+        <meta property="og:type" content="website" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto">
