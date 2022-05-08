@@ -1,4 +1,4 @@
-import axios from "axios";
+import fetch from "cross-fetch";
 import cheerio from "cheerio";
 import image from "../../assets/undefined.png";
 
@@ -7,8 +7,8 @@ const SWAPI_PEOPLE_URL = (page) => `${SWAPI_BASE_URL}/people?page=${page}`;
 const WOOKIEEPEDIA_URL = (name) =>
   `https://starwars.fandom.com/api.php?action=opensearch&limit=1&search=${name}`;
 
-export const dataFetch = async (url) =>
-  axios.get(url).then((response) => response.data);
+export const dataFetch = async (url) => (await fetch(url)).json();
+export const fetchHtml = async (url) => (await fetch(url)).text();
 
 const getCharacters = async () => {
   const characterPromises = [];
@@ -54,9 +54,9 @@ const addDescriptionAndImage = async (characters, planets) => {
 
   const [charactersHtml, planetsHtml] = await Promise.all([
     Promise.all(
-      charactersWookiepedia.map((character) => dataFetch(character[3][0]))
+      charactersWookiepedia.map((character) => fetchHtml(character[3][0]))
     ),
-    Promise.all(planetsWookiepedia.map((planet) => dataFetch(planet[3][0])))
+    Promise.all(planetsWookiepedia.map((planet) => fetchHtml(planet[3][0])))
   ]);
 
   const setInfo = (html, index, arr, link) => {
