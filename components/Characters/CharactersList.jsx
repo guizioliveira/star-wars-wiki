@@ -1,21 +1,7 @@
-import { useEffect } from "react";
 import { Loading } from "../Loading";
-import { getCharactersAndPlanets } from "../../pages/api/characterAPI";
 import { CharactersCard } from "./CharactersCard";
 
-export function CharacterList({
-  charData,
-  setCharacters,
-  planetData,
-  setPlanets
-}) {
-  useEffect(() => {
-    getCharactersAndPlanets().then((data) => {
-      setCharacters(data.characterMap);
-      setPlanets(data.planetMap);
-    });
-  }, []);
-
+export function CharacterList({ charData, planetData }) {
   return (
     <>
       {Object.values(charData).length === 0 ? (
