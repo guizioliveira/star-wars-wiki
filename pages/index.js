@@ -13,6 +13,7 @@ export default function Home({ characterMap, planetMap }) {
   const [characters] = useState(characterMap || {});
   const [planets] = useState(planetMap || {});
   const [filterCharacters, setFilterCharacter] = useState({});
+  const [hasSearchData, setHasSearchData] = useState(true);
 
   useEffect(() => {
     setFilterCharacter(characters);
@@ -26,11 +27,19 @@ export default function Home({ characterMap, planetMap }) {
           name="description"
           content="A wiki to learn more about characters and planets of the Star Wars world "
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto">
-        <Header charData={characters} setFilter={setFilterCharacter} />
-        <CharacterList charData={filterCharacters} planetData={planets} />
+        <Header
+          charData={characters}
+          setFilter={setFilterCharacter}
+          setHasSearchData={setHasSearchData}
+        />
+        <CharacterList
+          charData={filterCharacters}
+          planetData={planets}
+          hasSearchData={hasSearchData}
+        />
       </div>
     </>
   );

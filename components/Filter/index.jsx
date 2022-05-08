@@ -16,7 +16,7 @@ const order = [
   { id: 2, name: "descending" }
 ];
 
-export function Filter({ charData, setFilter }) {
+export function Filter({ charData, setFilter, setHasSearchData }) {
   const [isOpen, setIsOpen] = useState(false);
   const [filterBy, setFilterBy] = useState(filters[0]);
   const [orderBy, setOrderBy] = useState(order[0]);
@@ -48,6 +48,7 @@ export function Filter({ charData, setFilter }) {
       .forEach((character) => {
         filterCharacters[character.url] = character;
       });
+    setHasSearchData(Boolean(Object.keys(filterCharacters).length));
     setFilter(filterCharacters);
   }
 
