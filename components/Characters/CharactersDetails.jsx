@@ -57,7 +57,7 @@ export function CharactersDetails({ url, characters, planets }) {
                 </span>
                 <button
                   onClick={() => setRequestType(details.homeworld)}
-                  className="flex gap-2 items-center bg-primary-900 px-4 py-1 rounded-full text-sm tracking-wide text-white"
+                  className="flex gap-2 items-center bg-primary-900 px-4 py-1 rounded-full text-sm tracking-wide text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-700"
                 >
                   <div className="relative w-5 h-5 rounded-full bg-dark-900">
                     <div className="absolute w-5 h-5">
@@ -140,7 +140,7 @@ export function CharactersDetails({ url, characters, planets }) {
                 <button
                   key={index}
                   onClick={() => setRequestType(data.url)}
-                  className="flex gap-2 bg-primary-900 px-4 py-1 rounded-full tracking-wide text-white text-sm"
+                  className="flex gap-2 bg-primary-900 px-4 py-1 rounded-full tracking-wide text-white text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-700"
                 >
                   <div className="relative w-5 h-5 rounded-full bg-dark-900">
                     <div className="absolute w-5 h-5">
