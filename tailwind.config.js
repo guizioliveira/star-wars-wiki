@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 module.exports = {
   mode: "jit",
-  content: ["./pages/**/*.jsx", "./components/**/*.jsx"],
+  content: ["./pages/**/*.{js,jsx}", "./components/**/*.jsx"],
   theme: {
     screens: {
       xxs: "360px",
