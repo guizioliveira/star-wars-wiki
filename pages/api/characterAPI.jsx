@@ -1,6 +1,5 @@
 import fetch from "cross-fetch";
 import cheerio from "cheerio";
-import image from "../../assets/undefined.png";
 
 const SWAPI_BASE_URL = "https://swapi.dev/api";
 const SWAPI_PEOPLE_URL = (page) => `${SWAPI_BASE_URL}/people?page=${page}`;
@@ -66,7 +65,7 @@ const addDescriptionAndImage = async (characters, planets) => {
     });
     const figure = $("figure").find("img")[0];
     // eslint-disable-next-line no-param-reassign
-    arr[index].image = (figure && figure.attribs.src) || image;
+    arr[index].image = (figure && figure.attribs.src) || "/undefined.png";
     // eslint-disable-next-line no-param-reassign
     arr[index].description = $(
       "meta[name='twitter:description']"
