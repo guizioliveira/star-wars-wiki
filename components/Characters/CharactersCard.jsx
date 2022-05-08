@@ -41,7 +41,7 @@ export function CharactersCard({ url, characters, planets }) {
             {planet.name}
           </div>
         </div>
-        <div className="absolute w-2/3 h-full z-0 right-0 md:-right-4 group-hover:scale-110 group-focus-visible:scale-110 duration-300">
+        <div className="absolute w-2/3 h-full z-0 right-0 md:-right-4 sm:group-hover:scale-110 sm:group-focus-visible:scale-110 duration-300">
           <Image
             src={char.image}
             alt={`Image of ${char.name}`}
