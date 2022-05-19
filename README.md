@@ -1,5 +1,10 @@
-# Star Wars wiki
-<img align="right" width="500" src="https://user-images.githubusercontent.com/21250477/167324985-6733fe0b-fdbc-4c61-988e-11451053371a.png"/>
+<p align="center">
+  <img width="150" src="https://user-images.githubusercontent.com/21250477/169414853-2f142e4e-414d-4aa7-be75-c67660585f0d.png"/>
+</p>
+
+<p align="center">
+ <img width="800" src="https://user-images.githubusercontent.com/21250477/169414676-2e20cd55-1798-4210-8c25-549a28c79d15.png"/>
+</p>
 
 ## About the project
 This is a fun project I built for a job interview. It was my first time using [TailwindCSS](https://tailwindcss.com/) and [Next.js](https://nextjs.org/) so I think some performance updates will be implemented soon.
