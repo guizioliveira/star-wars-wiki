@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import { CharacterList } from "../components/Characters/CharactersList";
+import { CharacterList, Header } from "../components";
 import { getCharactersAndPlanets } from "./api/characterAPI";
-import { Header } from "../components/Header";
 
 export async function getStaticProps() {
   const data = await getCharactersAndPlanets();
